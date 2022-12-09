@@ -37,7 +37,7 @@ class Tail:
 
     def must_move(self, head: Head) -> bool:
         diff_x, diff_y = self.check_difference(head)
-        if (abs(diff_x) <= 1) and (abs(diff_y) <= 1):
+        if max((abs(diff_x), abs(diff_y))) <= 1:
             return False
         return True
 
